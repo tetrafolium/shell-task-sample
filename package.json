@@ -1,0 +1,19 @@
+{
+  "name": "codelift-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint -f @microsoft/eslint-formatter-sarif -o inspecode.sarif.json .",
+    "build": "tsc --build tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "^2.1.5",
+    "@tsconfig/node12": "^1.0.7",
+    "eslint": "^7.14.0",
+    "typescript": "^4.1.2"
+  }
+}

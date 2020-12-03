@@ -1,0 +1,19 @@
+inspecode:
+  tasks:
+    - name: my-eslint
+      type: shell
+      commands:
+        - 'pwd'
+        - 'ls -al'
+        - '. ./setup.sh'
+        - 'npm test || true'
+        - 'npm run build'
+        - 'cp src/greeter.html dist/'
+      artifacts:
+        - dist
+      reports:
+        - inspecode.sarif.json
+      machine:
+          cpu: 0.5
+      thresholds:
+        num-issues: 4
